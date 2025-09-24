@@ -7,12 +7,11 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.7;
-    background-color: #F7F7F2; /* fond clair uni */
-    color: #2c3e50; /* texte sombre */
-    /* Fond stylisé avec courbes et cercles discrets */
+    background-color: #F7F7F2; /* fond clair */
+    color: #2c3e50;
     background-image: 
-        radial-gradient(circle at 20% 20%, rgba(15,76,117,0.03), transparent 40%),
-        radial-gradient(circle at 80% 80%, rgba(15,76,117,0.03), transparent 40%),
+        radial-gradient(circle at 20% 20%, rgba(15,76,117,0.03), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(15,76,117,0.03), transparent 30%),
         radial-gradient(circle at 50% 10%, rgba(15,76,117,0.02), transparent 50%);
     background-attachment: fixed;
 }
@@ -25,7 +24,6 @@ header {
     padding: 3rem 1rem;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* ombre subtile sous le header */
 }
 
 header h1 {
@@ -48,13 +46,11 @@ section {
     padding: 2rem;
     background: #ffffff;
     border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
 }
 
 section h2 {
@@ -69,33 +65,28 @@ section h2 {
 p {
     font-size: 1rem;
     line-height: 1.8;
-    padding: 0.3rem 0.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* ombre subtile sous chaque paragraphe */
 }
 
 /* ===== Footer ===== */
 footer {
     text-align: center;
-    padding: 2rem 1rem;
-    background: #F2F3EC; /* plus clair que le fond */
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    margin-top: 3rem;
+    padding: 3rem 1rem;
+    background: #F2F3EC;
     position: relative;
     overflow: hidden;
 }
 
-/* Courbes décoratives dans le footer */
+/* Fond décoratif avec courbes dans le footer */
 footer::before {
     content: "";
     position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 200%;
-    height: 200px;
-    background: rgba(15,76,117,0.05);
-    border-radius: 50%;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: rgba(15,76,117,0.08);
+    border-bottom-left-radius: 50% 50px;
+    border-bottom-right-radius: 50% 50px;
     z-index: 0;
 }
 
@@ -124,13 +115,11 @@ footer h2 {
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(15,76,117,0.2);
 }
 
 .btn:hover {
     background: #0a364d;
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(15,76,117,0.3);
 }
 
 /* ===== Responsive ===== */
