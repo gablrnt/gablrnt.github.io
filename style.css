@@ -8,36 +8,33 @@ body {
     padding: 0;
     line-height: 1.7;
     color: #2c3e50;
-    background: #F7F7F2;
     position: relative;
     overflow-x: hidden;
+    background-color: #F7F7F2;
 }
 
-/* ===== Fond décoratif rouge vif ===== */
+/* ===== Fond spaghetti vert sur toute la page ===== */
 body::before {
     content: "";
-    position: absolute;
-    top: -100px;
-    left: -50%;
-    width: 200%;
-    height: 400px;
-    background: #ff3b3b; /* rouge vif */
-    border-radius: 50% 50% 0 0;
-    transform: rotate(-5deg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
-}
 
-body::after {
-    content: "";
-    position: absolute;
-    bottom: -150px;
-    right: -50%;
-    width: 200%;
-    height: 500px;
-    background: #ff0000; /* rouge vif plus intense */
-    border-radius: 50% 50% 50% 50%;
-    transform: rotate(10deg);
-    z-index: -1;
+    /* SVG pour motif filaments aléatoires */
+    background-image: url("data:image/svg+xml;utf8,\
+    <svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'>\
+      <g stroke='%2300a859' stroke-width='1' fill='none'>\
+        <path d='M10 10 C 20 30, 40 10, 50 20' />\
+        <path d='M30 40 C 50 10, 70 40, 90 20' />\
+        <path d='M0 150 C 20 130, 50 170, 80 150' />\
+        <path d='M60 60 C 80 90, 100 50, 120 80' />\
+      </g>\
+    </svg>");
+    background-repeat: repeat;
+    opacity: 0.15; /* pour que ce soit subtil derrière le texte */
 }
 
 /* ===== Header ===== */
@@ -54,7 +51,6 @@ header h1 {
     margin: 0;
     font-size: 2.8rem;
     font-weight: 700;
-    color: #F7F7F2;
 }
 
 header p {
@@ -68,13 +64,8 @@ section {
     max-width: 900px;
     margin: 3rem auto;
     padding: 2rem;
-    background: #ffffff;
+    background: rgba(255,255,255,0.9); /* légèrement translucide pour voir le fond */
     border-radius: 20px;
-    transition: transform 0.3s ease;
-}
-
-section:hover {
-    transform: translateY(-3px);
 }
 
 section h2 {
@@ -98,29 +89,6 @@ footer {
     background: #F2F3EC;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Petite vague décorative rouge au-dessus du footer */
-footer::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: -50%;
-    width: 200%;
-    height: 100px;
-    background: #ff3b3b;
-    border-radius: 50%;
-    transform: rotate(-5deg);
-    z-index: 0;
-}
-
-footer h2 {
-    color: #0f4c75;
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 1;
 }
 
 /* ===== Liens réseaux ===== */
@@ -128,8 +96,6 @@ footer h2 {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    position: relative;
-    z-index: 1;
 }
 
 .btn {
