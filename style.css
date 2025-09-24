@@ -13,7 +13,7 @@ body {
     background-color: #F7F7F2;
 }
 
-/* ===== Fond “traits longs gris foncé” ===== */
+/* ===== Fond “traits fins et aléatoires gris foncé” ===== */
 body::before {
     content: "";
     position: absolute;
@@ -23,18 +23,19 @@ body::before {
     height: 100%;
     z-index: -1;
 
-    /* SVG pour motifs “traits longs” gris foncé */
+    /* SVG pour traits fins aléatoires dans toutes les directions */
     background-image: url("data:image/svg+xml;utf8,\
-    <svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'>\
-      <g stroke='%23555555' stroke-width='2' fill='none'>\
-        <path d='M0 0 C 50 100, 100 0, 150 50' />\
-        <path d='M100 200 C 150 100, 200 250, 300 150' />\
-        <path d='M50 300 C 100 200, 150 350, 250 250' />\
-        <path d='M0 150 C 50 250, 150 100, 300 200' />\
+    <svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'>\
+      <g stroke='%23555555' stroke-width='0.5' fill='none'>\
+        <path d='M10 10 C 100 50, 150 80, 200 30' />\
+        <path d='M50 200 C 80 150, 120 220, 180 180' />\
+        <path d='M300 50 C 250 100, 350 130, 400 60' />\
+        <path d='M200 300 C 150 250, 250 350, 300 280' />\
+        <path d='M0 350 C 50 300, 100 400, 150 350' />\
       </g>\
     </svg>");
     background-repeat: repeat;
-    opacity: 0.2; /* subtil mais visible */
+    opacity: 0.15; /* subtil derrière le texte */
 }
 
 /* ===== Header ===== */
@@ -64,7 +65,7 @@ section {
     max-width: 900px;
     margin: 3rem auto;
     padding: 2rem;
-    background: rgba(255,255,255,0.95); /* léger effet translucide pour voir le fond */
+    background: rgba(255,255,255,0.95);
     border-radius: 20px;
 }
 
