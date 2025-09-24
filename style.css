@@ -1,72 +1,98 @@
-/* Style global */
+/* ===== Style global ===== */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #fdfdfd;
-    color: #333;
+    line-height: 1.7;
+    background-color: #FDFCFB; /* blanc cassé */
+    color: #2c3e50;
+    background-image: radial-gradient(circle at top left, rgba(0, 120, 200, 0.08), transparent 40%),
+                      radial-gradient(circle at bottom right, rgba(0, 150, 180, 0.08), transparent 40%);
+    background-attachment: fixed;
 }
 
-/* Header */
+/* ===== Header ===== */
 header {
-    background: #1e3a8a;
+    background: linear-gradient(135deg, #1ca3ec, #1282a2);
     color: #fff;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 
 header p {
     font-size: 1.2rem;
+    margin-top: 0.5rem;
+    opacity: 0.9;
 }
 
-/* Sections */
+/* ===== Sections ===== */
 section {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-3px);
 }
 
 section h2 {
-    color: #1e3a8a;
-    margin-bottom: 0.5rem;
+    color: #1282a2; /* bleu océan */
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    border-left: 5px solid #1ca3ec;
+    padding-left: 10px;
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
     text-align: center;
     padding: 2rem 1rem;
-    background: #f4f4f4;
-    margin-top: 2rem;
+    background: #f0f9ff;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-top: 3rem;
 }
 
 footer h2 {
-    color: #1e3a8a;
+    color: #1282a2;
     margin-bottom: 1rem;
 }
 
-/* Boutons réseaux */
+/* ===== Liens réseaux ===== */
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .btn {
     display: inline-block;
     text-decoration: none;
-    background: #1e3a8a;
+    background: #1ca3ec;
     color: white;
-    padding: 0.7rem 1.2rem;
-    border-radius: 5px;
-    transition: background 0.3s;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(28,163,236,0.2);
 }
 
 .btn:hover {
-    background: #0d245d;
+    background: #1282a2;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(18,130,162,0.3);
 }
