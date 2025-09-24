@@ -1,22 +1,23 @@
+/* ===== Import Google Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 /* ===== Style global ===== */
 body {
     font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.7;
-    background-color: #F0F1EC; /* fond clair uni */
+    background-color: #F7F7F2; /* fond plus clair, doux */
     color: #2c3e50; /* texte sombre */
-    /* décor discret : cercles arrondis */
-    background-image: radial-gradient(circle at 20% 20%, rgba(15,76,117,0.05), transparent 40%),
-                      radial-gradient(circle at 80% 80%, rgba(15,76,117,0.05), transparent 40%),
-                      radial-gradient(circle at 50% 50%, rgba(15,76,117,0.03), transparent 50%);
+    background-image: radial-gradient(circle at 25% 25%, rgba(15,76,117,0.04), transparent 40%),
+                      radial-gradient(circle at 75% 75%, rgba(15,76,117,0.04), transparent 40%);
     background-attachment: fixed;
 }
 
 /* ===== Header ===== */
 header {
     background: linear-gradient(135deg, #0f4c75, #0f4c75); /* bleu marine profond */
-    color: #fff;
+    color: #F7F7F2; /* titre assorti au fond */
     text-align: center;
     padding: 3rem 1rem;
     border-bottom-left-radius: 40px;
@@ -28,6 +29,7 @@ header h1 {
     margin: 0;
     font-size: 2.8rem;
     font-weight: 700;
+    color: #F7F7F2; /* titre assorti */
 }
 
 header p {
@@ -41,7 +43,7 @@ section {
     max-width: 900px;
     margin: 3rem auto;
     padding: 2rem;
-    background: white;
+    background: #ffffff; /* blanc pur pour les sections */
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -53,7 +55,7 @@ section:hover {
 }
 
 section h2 {
-    color: #0f4c75; /* bleu marine profond */
+    color: #0f4c75; /* bleu marine profond pour titres */
     margin-bottom: 1rem;
     font-size: 1.6rem;
     border-left: 5px solid #0f4c75;
@@ -64,7 +66,7 @@ section h2 {
 footer {
     text-align: center;
     padding: 2rem 1rem;
-    background: #e6e8df; /* léger contraste */
+    background: #eef1e6; /* léger contraste avec le fond */
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     margin-top: 3rem;
