@@ -13,7 +13,7 @@ body {
     background-color: #F7F7F2;
 }
 
-/* ===== Fond “traits fins et aléatoires gris foncé” ===== */
+/* ===== Fond “fils gris foncé” ===== */
 body::before {
     content: "";
     position: absolute;
@@ -23,19 +23,21 @@ body::before {
     height: 100%;
     z-index: -1;
 
-    /* SVG pour traits fins aléatoires dans toutes les directions */
     background-image: url("data:image/svg+xml;utf8,\
     <svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'>\
       <g stroke='%23555555' stroke-width='0.5' fill='none'>\
-        <path d='M10 10 C 100 50, 150 80, 200 30' />\
-        <path d='M50 200 C 80 150, 120 220, 180 180' />\
-        <path d='M300 50 C 250 100, 350 130, 400 60' />\
-        <path d='M200 300 C 150 250, 250 350, 300 280' />\
-        <path d='M0 350 C 50 300, 100 400, 150 350' />\
+        <line x1='10' y1='20' x2='300' y2='50' />\
+        <line x1='50' y1='10' x2='350' y2='200' />\
+        <line x1='0' y1='150' x2='400' y2='250' />\
+        <line x1='100' y1='300' x2='350' y2='50' />\
+        <line x1='200' y1='0' x2='250' y2='400' />\
+        <line x1='300' y1='150' x2='50' y2='350' />\
+        <line x1='0' y1='50' x2='200' y2='300' />\
+        <line x1='400' y1='0' x2='100' y2='400' />\
       </g>\
     </svg>");
     background-repeat: repeat;
-    opacity: 0.15; /* subtil derrière le texte */
+    opacity: 0.25; /* un peu plus visible */
 }
 
 /* ===== Header ===== */
