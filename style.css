@@ -9,7 +9,7 @@ body {
     line-height: 1.7;
     background-color: #F7F7F2; /* fond clair uni */
     color: #2c3e50; /* texte sombre */
-    /* Fond stylisé avec courbes douces */
+    /* Fond stylisé avec courbes et cercles discrets */
     background-image: 
         radial-gradient(circle at 20% 20%, rgba(15,76,117,0.03), transparent 40%),
         radial-gradient(circle at 80% 80%, rgba(15,76,117,0.03), transparent 40%),
@@ -20,12 +20,12 @@ body {
 /* ===== Header ===== */
 header {
     background: linear-gradient(135deg, #0f4c75, #0f4c75);
-    color: #F7F7F2; /* titre assorti au fond clair */
+    color: #F7F7F2;
     text-align: center;
     padding: 3rem 1rem;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* ombre subtile sous le header */
 }
 
 header h1 {
@@ -65,11 +65,20 @@ section h2 {
     padding-left: 10px;
 }
 
+/* ===== Paragraphes ===== */
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* ombre subtile sous chaque paragraphe */
+}
+
 /* ===== Footer ===== */
 footer {
     text-align: center;
     padding: 2rem 1rem;
-    background: #F2F3EC; /* plus clair que précédemment */
+    background: #F2F3EC; /* plus clair que le fond */
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     margin-top: 3rem;
@@ -121,28 +130,4 @@ footer h2 {
 .btn:hover {
     background: #0a364d;
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(15,76,117,0.3);
-}
-
-/* ===== Petits détails pour le texte ===== */
-p {
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 600px) {
-    section {
-        margin: 2rem 1rem;
-        padding: 1.5rem;
-    }
-    header h1 {
-        font-size: 2rem;
-    }
-    header p {
-        font-size: 1rem;
-    }
-    section h2 {
-        font-size: 1.4rem;
-    }
-}
+    box-shadow:
