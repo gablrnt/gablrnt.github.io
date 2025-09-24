@@ -7,13 +7,37 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.7;
-    background-color: #F7F7F2; /* fond clair */
     color: #2c3e50;
-    background-image: 
-        radial-gradient(circle at 20% 20%, rgba(15,76,117,0.03), transparent 30%),
-        radial-gradient(circle at 80% 80%, rgba(15,76,117,0.03), transparent 30%),
-        radial-gradient(circle at 50% 10%, rgba(15,76,117,0.02), transparent 50%);
-    background-attachment: fixed;
+    background: #F7F7F2;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ===== Fond décoratif rouge vif ===== */
+body::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -50%;
+    width: 200%;
+    height: 400px;
+    background: #ff3b3b; /* rouge vif */
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    right: -50%;
+    width: 200%;
+    height: 500px;
+    background: #ff0000; /* rouge vif plus intense */
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(10deg);
+    z-index: -1;
 }
 
 /* ===== Header ===== */
@@ -72,21 +96,23 @@ footer {
     text-align: center;
     padding: 3rem 1rem;
     background: #F2F3EC;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
     position: relative;
     overflow: hidden;
 }
 
-/* Fond décoratif avec courbes dans le footer */
+/* Petite vague décorative rouge au-dessus du footer */
 footer::before {
     content: "";
     position: absolute;
-    top: -60px;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background: rgba(15,76,117,0.08);
-    border-bottom-left-radius: 50% 50px;
-    border-bottom-right-radius: 50% 50px;
+    top: -50px;
+    left: -50%;
+    width: 200%;
+    height: 100px;
+    background: #ff3b3b;
+    border-radius: 50%;
+    transform: rotate(-5deg);
     z-index: 0;
 }
 
