@@ -4,16 +4,18 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.7;
-    background-color: #F0F1EC; /* fond uni clair */
+    background-color: #F0F1EC; /* fond clair uni */
     color: #2c3e50; /* texte sombre */
-    background-image: radial-gradient(circle at 20% 30%, rgba(15,76,117,0.05), transparent 40%),
-                      radial-gradient(circle at 80% 70%, rgba(15,76,117,0.05), transparent 40%);
+    /* décor discret : cercles arrondis */
+    background-image: radial-gradient(circle at 20% 20%, rgba(15,76,117,0.05), transparent 40%),
+                      radial-gradient(circle at 80% 80%, rgba(15,76,117,0.05), transparent 40%),
+                      radial-gradient(circle at 50% 50%, rgba(15,76,117,0.03), transparent 50%);
     background-attachment: fixed;
 }
 
 /* ===== Header ===== */
 header {
-    background: linear-gradient(135deg, #0f4c75, #0f4c75); /* bleu marine plus profond */
+    background: linear-gradient(135deg, #0f4c75, #0f4c75); /* bleu marine profond */
     color: #fff;
     text-align: center;
     padding: 3rem 1rem;
@@ -42,15 +44,16 @@ section {
     background: white;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
 }
 
 section h2 {
-    color: #0f4c75; /* bleu marine plus profond */
+    color: #0f4c75; /* bleu marine profond */
     margin-bottom: 1rem;
     font-size: 1.6rem;
     border-left: 5px solid #0f4c75;
@@ -61,7 +64,7 @@ section h2 {
 footer {
     text-align: center;
     padding: 2rem 1rem;
-    background: #e6e8df; /* léger contraste avec le fond principal */
+    background: #e6e8df; /* léger contraste */
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     margin-top: 3rem;
@@ -95,4 +98,27 @@ footer h2 {
     background: #0a364d;
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(15,76,117,0.3);
+}
+
+/* ===== Petits détails pour le texte ===== */
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    section {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    section h2 {
+        font-size: 1.4rem;
+    }
 }
